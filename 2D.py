@@ -11,7 +11,7 @@ def getZ(x, y, t):
     return (cos(radians(r))) * (300 * t ** (-r))
 
 
-def main():
+if __name__ == "__main__":
     width = 1200
     t = 1.003
     height = 640
@@ -19,7 +19,7 @@ def main():
     Min = int(-width / 2)
     Max = int(width / 2)
 
-    d =20
+    d = 20
     # Set lable
     graph = GraphWin("myGraph", height, height)
     graph.setCoords(Min, Min, Max, Max)
@@ -45,7 +45,3 @@ def main():
     image.show()
     image.save("C:\graph\graph.GIF")
     graph.getMouse()
-
-
-if __name__ == "__main__":
-    main()
